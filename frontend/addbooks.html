@@ -20,18 +20,28 @@
       </nav>
     </header>
 
-    <div class="about" id="about">
-      <h2 class="heading-2">About BookDucks</h2>
-      <p>
-        Libraries are out, BookDucks is IN!<br />
-        Borrow books from random stranger on the internet instead of supporting
-        your local library, it's way cooler.<br />
-        We have both printed books and audiobooks that you can rent, exactly
-        like a library!
-      </p>
+    <div class="add-items" id="add-items">
+      <div class="add-books" id="add-books"></div>
+      <div id="add-audio" class="add-audio"></div>
     </div>
 
-    
+    <div id="form-container">
+      <h2>Lägg till en produkt</h2>
+      <div>
+          <label for="bookTitle">Title:</label>
+          <input type="text" id="bookTitle">
+      </div>
+      <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author">
+      </div>
+      <div>
+          <label for="image">Image:</label>
+          <input type="file" id="image">
+      </div>
+      <button>Add book</button>
+  </div>
+
 
     <footer class="footer">
       <p>
@@ -40,6 +50,6 @@
     </footer>
 
     <!-- <script src="./js/main.js"></script> -->
-    <script src="index.js"></script>
+    <script src="addbooks.js"></script>
   </body>
 </html>

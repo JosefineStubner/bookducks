@@ -16,6 +16,7 @@ const login = async () => {
     });
     console.log(response);
     sessionStorage.setItem("token", response.data.jwt);
+    sessionStorage.setItem("userId", response.data.user.id);
     checkIfLoggedIn()
 }
 

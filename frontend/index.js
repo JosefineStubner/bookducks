@@ -48,7 +48,7 @@ const renderAudiobooks = async (audiobooks) => {
     let genreText = "";
 
     audiobook.attributes.genres.data.forEach(genre => {
-      genreText = `${genre.attributes.genre}`;
+      genreText += `${genre.attributes.genre}<br> `;
     })
 
     audiobooks.innerHTML += `<div class="singleBook">
