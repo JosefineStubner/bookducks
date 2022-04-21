@@ -6,49 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookDucks</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+      integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
-      <h1 class="bookducks-heading">BookDucks</h1>
-      <nav>
-        <a href="profile.html" class="nav-link" id="profile-link">Profile Page</a>
+      <h1 class="heading-1">BookDucks</h1>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link" id="index-link">Home</a>
         <a href="signin.html" class="nav-link" id="signin-link">Sign In</a>
-        <button class="signout-btn" id="signout-btn">Sign Out</button>
+        <a href="profile.html" class="nav-link" id="profile-link">Profile Page</a>
       </nav>
+      <button class="signout-btn" id="signout-btn">Sign Out</button>
     </header>
 
     <main>
-    <div class="add-items" id="add-items">
-      <div class="add-books" id="add-books"></div>
-      <div id="add-audio" class="add-audio"></div>
-    </div>
-
-    <div id="form-container">
-      <h2>Add a book.</h2>
-      <div>
-          <label for="bookTitle">Title:</label>
-          <input type="text" id="bookTitle">
+      <div class="add-items" id="add-items">
+        <div class="add-book" id="add-book">
+          <div id="form-container">
+            <h2>Add a book.</h2>
+            <div>
+              <label for="bookTitle">Title:</label>
+              <input type="text" id="bookTitle" required/>
+            </div>
+            <div>
+              <label for="author">Author:</label>
+              <input type="text" id="author" required/>
+            </div>
+            <div>
+              <label for="pages">Pages:</label>
+              <input type="number" id="pages" required/>
+            </div>
+            <div>
+              <label for="score">Score:</label>
+              <select name="score" id="score" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected>10</option>
+              </select>
+            </div>
+            <div>
+              <p>Genres:</p>
+              <label for="genre1">Crime</label>
+              <input type="checkbox" name="genre" id="genre" value=7>
+              <label for="genre2">Horror</label>
+              <input type="checkbox" name="genre" id="genre" value=9>
+              <label for="genre3">Sci-fi</label>
+              <input type="checkbox" name="genre" id="genre" value=10>
+              <label for="genre4">Non-Fiction</label>
+              <input type="checkbox" name="genre" id="genre" value=8>
+              <label for="genre5">Fantasy</label>
+              <input type="checkbox" name="genre" id="genre" value=6>
+            </div>
+            <div>
+              <label for="image">Cover image:</label>
+              <input type="file" id="image" required/>
+            </div>
+            <button id="add-book-btn">Add book</button>
+          </div>
+        </div>
+        <div id="add-audio" class="add-audio">
+          <div id="form-container">
+            <h2>Add an audiobook.</h2>
+            <div>
+              <label for="bookTitle">Title:</label>
+              <input type="text" id="bookTitle" required/>
+            </div>
+            <div>
+              <label for="length">Length (hours):</label>
+              <input type="number" id="length" required/>
+            </div>
+            <div>
+              <label for="pages">Published:</label>
+              <input type="number" id="pages" required/>
+            </div>
+            <div>
+              <label for="score">Score:</label>
+              <select name="score" id="score" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected>10</option>
+              </select>
+            </div>
+            <div>
+              <p>Genres:</p>
+              <label for="genre1">Crime</label>
+              <input type="checkbox" name="genre" id="genre1" value="1">
+              <label for="genre2">Horror</label>
+              <input type="checkbox" name="genre" id="genre2" value="2">
+              <label for="genre3">Sci-fi</label>
+              <input type="checkbox" name="genre" id="genre3" value="3">
+              <label for="genre4">Non-Fiction</label>
+              <input type="checkbox" name="genre" id="genre4" value="4">
+              <label for="genre5">Fantasy</label>
+            </div>
+            <div>
+              <label for="image">Cover image:</label>
+              <input type="file" id="image" required/>
+            </div>
+            <button id="add-book-btn">Add book</button>
+          </div>
+        </div>
       </div>
-      <div>
-          <label for="author">Author:</label>
-          <input type="text" id="author">
-      </div>
-      <div>
-          <label for="image">Image:</label>
-          <input type="file" id="image">
-      </div>
-      <button id="add-book-btn">Add book</button>
-  </div>
-
-</main>
-
+    </main>
 
     <footer class="footer">
-      <p>
-        Disclaimer: The above statement was a lie, there will be no free money.
-      </p>
+      <p>BookDucks &#169; 2022</p>
     </footer>
 
     <script src="addbooks.js"></script>

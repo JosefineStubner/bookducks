@@ -27,16 +27,28 @@ body {
   background-color: rgb(57, 162, 174);
 }
 
-/* .signout-btn {
+.header-nav {
   display: flex;
-  justify-content: end;
-} */
-
-main {
-  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
-.all-items {
+.signout-btn {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: 0 auto;
+  width: 90%;
+}
+
+.all-items, .about {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,23 +57,47 @@ main {
 
 .books {
   margin: 1rem;
+  width: 100%;
+}
+
+.about {
+  margin: 2rem 0 0 0;
+}
+
+.book-heading {
+  margin: 2rem;
 }
 
 .single-book {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   margin: 2rem;
   background-color: rgb(232, 216, 210);
 }
 
 
 .footer {
+  position: sticky;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: 5vh;
   background-color: rgb(57, 162, 174);
+}
+
+.add-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.add-book, .add-audio {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  background-color: rgb(227, 188, 181);
 }
 
 
