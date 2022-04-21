@@ -1,3 +1,12 @@
+//upload books
+
+const uploadBooksBtn = document.querySelector("#upload-btn")
+
+uploadBooksBtn.addEventListener("click", () => {
+  location.href = "addbooks.html";
+  console.log("I was clicked");
+})
+
 //get user profile
 
 let userId = sessionStorage.getItem("userId")

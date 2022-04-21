@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1 class="bookducks-heading">BookDucks</h1>
-      <h2 class="heading-2">Rent a book - Get free money!</h2>
       <nav>
         <a href="profile.html" class="nav-link" id="profile-link">Profile Page</a>
         <a href="signin.html" class="nav-link" id="signin-link">Sign In</a>
@@ -20,13 +19,14 @@
       </nav>
     </header>
 
+    <main>
     <div class="add-items" id="add-items">
       <div class="add-books" id="add-books"></div>
       <div id="add-audio" class="add-audio"></div>
     </div>
 
     <div id="form-container">
-      <h2>Lägg till en produkt</h2>
+      <h2>Add a book.</h2>
       <div>
           <label for="bookTitle">Title:</label>
           <input type="text" id="bookTitle">
@@ -39,8 +39,10 @@
           <label for="image">Image:</label>
           <input type="file" id="image">
       </div>
-      <button>Add book</button>
+      <button id="add-book-btn">Add book</button>
   </div>
+
+</main>
 
 
     <footer class="footer">
@@ -49,7 +51,7 @@
       </p>
     </footer>
 
-    <!-- <script src="./js/main.js"></script> -->
     <script src="addbooks.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

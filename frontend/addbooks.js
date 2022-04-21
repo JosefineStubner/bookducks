@@ -1,8 +1,14 @@
 //lol
 
+const addBookBtn = document.querySelector("#add-book-btn")
+
 let bookTitle = document.querySelector("#bookTitle");
 let author = document.querySelector("#author");
 let image = document.querySelector("#image");
+
+addBookBtn.addEventListener("click", () => {
+    addProduct();
+})
 
 const addProduct = async () => {
   //Hämtar ut filen och placerar den i en FormData
@@ -22,10 +28,9 @@ const addProduct = async () => {
       axios.post("http://localhost:1337/api/books", {
           //request body
               data: {
-                  name: bookTitle.value,
-                  price: author.value,
-                  category: [1],
-                  image:imageId
+                  title: bookTitle.value,
+                  author: author.value,
+                  cover:imageId
               }
           },
           {
@@ -35,5 +40,4 @@ const addProduct = async () => {
               }
           })
       })
-  
 }

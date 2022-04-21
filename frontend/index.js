@@ -28,7 +28,7 @@ const renderBooks = async (books) => {
       genreText = `${genre.attributes.genre}`;
     })
 
-    books.innerHTML += `<div class="singleBook">
+    books.innerHTML += `<div class="single-book">
     <img src="http://localhost:1337${book.attributes.cover.data.attributes.url}" height="150" width="100">
     <p class="item-p">Title: ${book.attributes.title}</p>
     <p class="item-p">Author: ${book.attributes.author}</p>
@@ -51,7 +51,7 @@ const renderAudiobooks = async (audiobooks) => {
       genreText += `${genre.attributes.genre}<br> `;
     })
 
-    audiobooks.innerHTML += `<div class="singleBook">
+    audiobooks.innerHTML += `<div class="single-book">
     <img src="http://localhost:1337${audiobook.attributes.cover.data.attributes.url}" height="100" width="100">
     <p class="item-p">Title: ${audiobook.attributes.title}</p>
     <p class="item-p">Published: ${audiobook.attributes.published}</p>

@@ -15,56 +15,63 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1 class="bookducks-heading">BookDucks</h1>
-      <h2 class="heading-2">Rent a book - Get free money!</h2>
       <nav>
         <a href="index.html" class="nav-link" id="index-link">Home</a>
-        <a href="profile.html" class="nav-link" id="profile-link"
-          >Profile Page</a
-        >
         <button class="signout-btn" id="signout-btn">Sign Out</button>
       </nav>
     </header>
 
-    <div id="login-container" class="login-class">
-      <h2 class="heading-2">Log In</h2>
+    <main>
+      <div id="login-container" class="login-class">
+        <h2 class="heading-2">Log In</h2>
 
-      <div class="login-fields">
-        <form id="login-form" class="login-form-class">
-          <label for="username">Username:</label>
-          <input type="text" name="username" id="username" required/><br />
+        <div class="login-fields">
+          <form id="login-form" class="login-form-class">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required /><br />
 
-          <label for="password">Password:</label>
-          <input type="text" name="password" id="password" required/><br />
+            <label for="password">Password:</label>
+            <input type="text" name="password" id="password" required /><br />
 
-          <button id="login-btn" class="btn">Log In</button>
+            <button id="login-btn" class="btn">Log In</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="register-container" class="register-class">
+        <h2>Register new user:</h2>
+
+        <form id="register-form" class="register-form-class">
+          <label for="register-username">Username:</label>
+          <input
+            type="text"
+            name="register-username"
+            id="register-username"
+            required
+          /><br />
+
+          <label for="register-email">Email:</label>
+          <input
+            type="email"
+            name="register-email"
+            id="register-email"
+            required
+          /><br />
+
+          <label for="register-password">Password:</label>
+          <input
+            type="password"
+            name="register-password"
+            id="register-password"
+            required
+          /><br />
+
+          <button id="register-btn" class="btn">Register</button>
         </form>
       </div>
-    </div>
-
-    <div id="register-container" class="register-class">
-      <h2>Register new user:</h2>
-
-      <form id="register-form" class="register-form-class">
-      <label for="register-username">Username:</label>
-      <input
-        type="text"
-        name="register-username"
-        id="register-username"
-        required
-      /><br />
-      
-      <label for="register-email">Email:</label>
-      <input type="email" name="register-email" id="register-email" required><br>
-
-      <label for="register-password">Password:</label>
-      <input type="password" name="register-password" id="register-password" required/><br>
-
-      <button id="register-btn" class="btn">Register</button>
-
-    </form>
-    </div>
+    </main>
 
     <footer class="footer">
       <p>
@@ -72,8 +79,8 @@
       </p>
     </footer>
 
-    <!-- <script src="hanna.js"></script> -->
-    <!-- <script src="fredrica.js"></script> -->
+    <script src="main.js"></script>
     <script src="signin.js"></script>
+    
   </body>
 </html>
