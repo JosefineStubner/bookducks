@@ -81,20 +81,20 @@
           <div id="form-container">
             <h2>Add an audiobook.</h2>
             <div>
-              <label for="bookTitle">Title:</label>
-              <input type="text" id="bookTitle" required/>
-            </div>
-            <div>
-              <label for="length">Length (hours):</label>
-              <input type="number" id="length" required/>
+              <label for="audioTitle">Title:</label>
+              <input type="text" id="audioTitle" required/>
             </div>
             <div>
               <label for="pages">Published:</label>
-              <input type="number" id="pages" required/>
+              <input type="date" id="published" required/>
             </div>
             <div>
-              <label for="score">Score:</label>
-              <select name="score" id="score" required>
+              <label for="length">Length (minutes):</label>
+              <input type="number" id="length" required/>
+            </div>
+            <div>
+              <label for="audioscore">Score:</label>
+              <select name="score" id="audioscore" required>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -110,20 +110,21 @@
             <div>
               <p>Genres:</p>
               <label for="genre1">Crime</label>
-              <input type="checkbox" name="genre" id="genre1" value="1">
+              <input type="checkbox" name="genre" id="audiogenre" value=7>
               <label for="genre2">Horror</label>
-              <input type="checkbox" name="genre" id="genre2" value="2">
+              <input type="checkbox" name="genre" id="audiogenre" value=9>
               <label for="genre3">Sci-fi</label>
-              <input type="checkbox" name="genre" id="genre3" value="3">
+              <input type="checkbox" name="genre" id="audiogenre" value=10>
               <label for="genre4">Non-Fiction</label>
-              <input type="checkbox" name="genre" id="genre4" value="4">
+              <input type="checkbox" name="genre" id="audiogenre" value=8>
               <label for="genre5">Fantasy</label>
+              <input type="checkbox" name="genre" id="audiogenre" value=6>
             </div>
             <div>
-              <label for="image">Cover image:</label>
-              <input type="file" id="image" required/>
+              <label for="audioimage">Cover image:</label>
+              <input type="file" id="audioimage" required/>
             </div>
-            <button id="add-book-btn">Add book</button>
+            <button id="add-audiobook-btn">Add audiobook</button>
           </div>
         </div>
       </div>
@@ -133,7 +134,7 @@
       <p>BookDucks &#169; 2022</p>
     </footer>
 
-    <script src="addbooks.js"></script>
-    <script src="main.js"></script>
+    <script src="./js/addbooks.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
