@@ -32,7 +32,7 @@ const renderUser = async (user) => {
   const userInfo = document.querySelector("#user-info");
 
   userInfo.innerHTML += `
-  <h3>Welcome to your profile page!</h3>
+  <h2>Welcome to your profile page!</h2>
   <ul>
   <li>Username: ${user.username}</li>
   <li>Email: ${user.email}</li>
@@ -71,7 +71,6 @@ getUserAudio();
 
 //render user books
 
-//AAAAAHHH PROBLEEEEEEEM
 const renderUserBooks = async (userBooks) => {
   userBooks.data.forEach(book => {
     
@@ -84,7 +83,7 @@ const renderUserBooks = async (userBooks) => {
     let genreText = "";
 
     genres.data.forEach(genre => {
-      genreText = `${genre.attributes.genre}`;
+      genreText += `${genre.attributes.genre} `;
     })
 
     userBooks.innerHTML += `<div class="single-book">
@@ -93,7 +92,7 @@ const renderUserBooks = async (userBooks) => {
     <p class="item-p">Author: ${author}</p>
     <p class="item-p">Pages: ${pages}</p>
     <p class="item-p">Score: ${score}</p>
-    <p class="item-p">Genre(s): ${genreText} </p>
+    <p class="item-p">Genre(s): ${genreText}</p>
     <p class="item-p">Lender: ${user.data.attributes.username}</p>
     <p class="item-p">Contact: ${user.data.attributes.email}</p>
     </div>`
@@ -115,7 +114,7 @@ const renderUserAudio = async (userAudio) => {
     let genreText = "";
 
     genres.data.forEach(genre => {
-      genreText = `${genre.attributes.genre}`;
+      genreText += `${genre.attributes.genre} `;
     })
 
     userAudio.innerHTML += `<div class="single-book">
@@ -124,7 +123,7 @@ const renderUserAudio = async (userAudio) => {
     <p class="item-p">Published: ${published}</p>
     <p class="item-p">Length (minutes): ${length}</p>
     <p class="item-p">Score: ${score}</p>
-    <p class="item-p">Genre(s): ${genreText} </p>
+    <p class="item-p">Genre(s): ${genreText}</p>
     <p class="item-p">Lender: ${user.data.attributes.username}</p>
     <p class="item-p">Contact: ${user.data.attributes.email}</p>
     </div>`

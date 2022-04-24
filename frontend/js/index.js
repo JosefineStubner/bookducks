@@ -25,7 +25,7 @@ const renderBooks = async (books) => {
     let genreText = "";
 
     book.attributes.genres.data.forEach(genre => {
-      genreText = `${genre.attributes.genre}`;
+      genreText += `${genre.attributes.genre} `;
     })
 
     books.innerHTML += `<div class="single-book">
@@ -34,7 +34,7 @@ const renderBooks = async (books) => {
     <p class="item-p">Author: ${book.attributes.author}</p>
     <p class="item-p">Pages: ${book.attributes.pages}</p>
     <p class="item-p">Score: ${book.attributes.score}</p>
-    <p class="item-p">Genre(s): ${genreText} </p>
+    <p class="item-p">Genre(s): ${genreText}</p>
     <p class="item-p">Lender: ${book.attributes.user.data.attributes.username}</p>
     <p class="item-p">Contact: ${book.attributes.user.data.attributes.email}</p>
     </div>`
@@ -48,7 +48,7 @@ const renderAudiobooks = async (audiobooks) => {
     let genreText = "";
 
     audiobook.attributes.genres.data.forEach(genre => {
-      genreText += `${genre.attributes.genre}`;
+      genreText += `${genre.attributes.genre} `;
     })
 
     audiobooks.innerHTML += `<div class="single-book">
@@ -57,7 +57,7 @@ const renderAudiobooks = async (audiobooks) => {
     <p class="item-p">Published: ${audiobook.attributes.published}</p>
     <p class="item-p">Length (minutes): ${audiobook.attributes.length}hours</p>
     <p class="item-p">Score: ${audiobook.attributes.score}</p>
-    <p class="item-p">Genre(s): ${genreText} </p>
+    <p class="item-p">Genre(s): ${genreText}</p>
     <p class="item-p">Lender: ${audiobook.attributes.user.data.attributes.username}</p>
     <p class="item-p">Contact: ${audiobook.attributes.user.data.attributes.email}</p>
     </div>`

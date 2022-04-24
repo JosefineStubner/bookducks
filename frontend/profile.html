@@ -18,18 +18,24 @@
     <header class="header">
       <h1 class="heading-1">BookDucks</h1>
       <nav class="header-nav">
+        <a href="index.html" class="nav-link" id="index-link">Home</a>
         <a href="signin.html" class="nav-link" id="signin-link">Sign In</a>
-        <a href="profile.html" class="nav-link" id="profile-link">Profile Page</a>
       </nav>
       <button class="signout-btn" id="signout-btn">Sign Out</button>
     </header>
 
     <main>
     <div id="profile-container" class="profile-container">
+      <div id="profile" class="profile">
       <div id="user-info" class="user-info"></div>
       <button id="upload-btn" class="upload-btn">Upload Books</button>
-      <div id="user-books" class="user-books"></div>
-      <div id="user-audio" class="user-audio"></div>
+      </div>
+      <div id="user-books" class="user-books">
+        <h2 class="book-heading">Books:</h2>
+      </div>
+      <div id="user-audio" class="user-audio">
+        <h2 class="book-heading">Audiobooks:</h2>
+      </div>
     </div>
 
   </main>
