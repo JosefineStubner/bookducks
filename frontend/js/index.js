@@ -31,13 +31,13 @@ const renderBooks = async (books) => {
 
     books.innerHTML += `<div class="single-book">
     <img src="http://localhost:1337${book.attributes.cover.data.attributes.url}" height="150" width="100">
-    <p class="item-p">Title: ${book.attributes.title}</p>
-    <p class="item-p">Author: ${book.attributes.author}</p>
-    <p class="item-p">Pages: ${book.attributes.pages}</p>
-    <p class="item-p">Score: ${book.attributes.score}</p>
-    <p class="item-p">Genre(s): ${genreText}</p>
-    <p class="item-p">Lender: ${book.attributes.user.data.attributes.username}</p>
-    <p class="item-p">Contact: ${book.attributes.user.data.attributes.email}</p>
+    <p class="item-p"><b>Title:</b> ${book.attributes.title}</p>
+    <p class="item-p"><b>Author:</b> ${book.attributes.author}</p>
+    <p class="item-p"><b>Pages:</b> ${book.attributes.pages}</p>
+    <p class="item-p"><b>Score:</b> ${book.attributes.score}</p>
+    <p class="item-p"><b>Genre(s):</b> ${genreText}</p>
+    <p class="item-p"><b>Lender:</b> ${book.attributes.user.data.attributes.username}</p>
+    <p class="item-p"><b>Contact:</b> ${book.attributes.user.data.attributes.email}</p>
     </div>`
   })
 }
@@ -53,14 +53,16 @@ const renderAudiobooks = async (audiobooks) => {
     })
 
     audiobooks.innerHTML += `<div class="single-book">
+    <div class="height-div"></div>
     <img src="http://localhost:1337${audiobook.attributes.cover.data.attributes.url}" height="100" width="100">
-    <p class="item-p">Title: ${audiobook.attributes.title}</p>
-    <p class="item-p">Published: ${audiobook.attributes.published}</p>
-    <p class="item-p">Length (minutes): ${audiobook.attributes.length}hours</p>
-    <p class="item-p">Score: ${audiobook.attributes.score}</p>
-    <p class="item-p">Genre(s): ${genreText}</p>
-    <p class="item-p">Lender: ${audiobook.attributes.user.data.attributes.username}</p>
-    <p class="item-p">Contact: ${audiobook.attributes.user.data.attributes.email}</p>
+    <div class="height-div2"></div>
+    <p class="item-p"><b>Title:</b> ${audiobook.attributes.title}</p>
+    <p class="item-p"><b>Published:</b> ${audiobook.attributes.published}</p>
+    <p class="item-p"><b>Length:</b> ${audiobook.attributes.length} minutes</p>
+    <p class="item-p"><b>Score:</b> ${audiobook.attributes.score}</p>
+    <p class="item-p"><b>Genre(s):</b> ${genreText}</p>
+    <p class="item-p"><b>Lender:</b> ${audiobook.attributes.user.data.attributes.username}</p>
+    <p class="item-p"><b>Contact:</b> ${audiobook.attributes.user.data.attributes.email}</p>
     </div>`
   })
 }

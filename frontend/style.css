@@ -45,9 +45,9 @@ a:hover {
   margin:0 0.1em 0.1em 0;
   border-radius:2em;
   font-weight: 550;
-  color: rgb(18, 75, 82);
+  color: rgb(26, 114, 126);
   background-color: rgb(247, 247, 247);
-  border-color: rgb(18, 75, 82);
+  border-color: rgb(26, 114, 126);
   box-sizing: border-box;
   border-width: 1.5px;
   cursor: pointer;
@@ -57,6 +57,24 @@ a:hover {
   color: rgb(247, 247, 247);
       background-color: rgb(18, 75, 82);
   }
+
+  .btn {
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border-radius:2em;
+    font-weight: 550;
+    color: rgb(196, 91, 73);
+    background-color: rgb(247, 247, 247);
+    border-color: rgb(196, 91, 73);
+    box-sizing: border-box;
+    border-width: 1.5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    color: rgb(247, 247, 247);
+        background-color: rgb(196, 91, 73);
+    }
 
 main {
   display: flex;
@@ -71,7 +89,10 @@ main {
   flex-direction: column;
 }
 
-.all-items,
+.all-items {
+  display: flex;
+}
+
 .about,
 .user-info,
 .add-items {
@@ -92,10 +113,14 @@ main {
   margin: 3vh 50vh 0 50vh;
 }
 
-.books,
-.add-items {
-  margin: 1rem;
-  width: 100%;
+#add-book-btn {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;  
+}
+
+.books, .audioclass  {
+    flex: 1;
 }
 
 .about, .user-info {
@@ -106,13 +131,48 @@ main {
   margin: 2rem;
 }
 
+.upload-heading {
+  margin-top: 2rem;
+}
+
+.height-div { 
+  display: block;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  min-height: 25px;
+  background-color: rgb(232, 216, 210);
+}
+
+.height-div2 { 
+  min-height: 25px;
+  background-color: rgb(232, 216, 210);
+}
+
 .single-book,
-.add-book {
+.add-book,
+.login-class {
   display: flex;
   flex-direction: column;
   margin: 2rem;
   background-color: rgb(232, 216, 210);
   border-radius: 0.5em;
+}
+
+.login-class {
+  justify-content: center;
+  align-items: center;
+}
+
+.form-class {
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2vh;
+}
+
+.signin-heading {
+  padding: 1.5vh 0;
 }
 
 .add-book {
@@ -131,12 +191,6 @@ img, .item-p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.add-book-btn {
-  display: flex;
-  align-self: flex-end;
-  margin-right: auto;
 }
 
 .footer {

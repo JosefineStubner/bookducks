@@ -25,11 +25,12 @@
     </header>
 
     <main>
+      <div id="signin-container" class="signin-container">
       <div id="login-container" class="login-class">
-        <h2 class="heading-2">Log In</h2>
+        <h2 class="signin-heading">Log in:</h2>
 
         <div class="login-fields">
-          <form id="login-form" class="login-form-class">
+          <form id="login-form" class="form-class">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" required /><br />
 
@@ -41,10 +42,10 @@
         </div>
       </div>
 
-      <div id="register-container" class="register-class">
-        <h2>Register new user:</h2>
+      <div id="register-container" class="login-class">
+        <h2 class="signin-heading">Register new user:</h2>
 
-        <form id="register-form" class="register-form-class">
+        <form id="register-form" class="form-class">
           <label for="register-username">Username:</label>
           <input
             type="text"
@@ -72,6 +73,7 @@
           <button id="register-btn" class="btn">Register</button>
         </form>
       </div>
+    </div>
     </main>
 
     <footer class="footer">

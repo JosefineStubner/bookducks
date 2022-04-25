@@ -88,13 +88,13 @@ const renderUserBooks = async (userBooks) => {
 
     userBooks.innerHTML += `<div class="single-book">
     <img src="http://localhost:1337${cover.data.attributes.url}" height="150" width="100">
-    <p class="item-p">Title: ${title}</p>
-    <p class="item-p">Author: ${author}</p>
-    <p class="item-p">Pages: ${pages}</p>
-    <p class="item-p">Score: ${score}</p>
-    <p class="item-p">Genre(s): ${genreText}</p>
-    <p class="item-p">Lender: ${user.data.attributes.username}</p>
-    <p class="item-p">Contact: ${user.data.attributes.email}</p>
+    <p class="item-p"><b>Title:</b> ${title}</p>
+    <p class="item-p"><b>Author:</b> ${author}</p>
+    <p class="item-p"><b>Pages:</b> ${pages}</p>
+    <p class="item-p"><b>Score:</b> ${score}</p>
+    <p class="item-p"><b>Genre(s):</b> ${genreText}</p>
+    <p class="item-p"><b>Lender:</b> ${user.data.attributes.username}</p>
+    <p class="item-p"><b>Contact:</b> ${user.data.attributes.email}</p>
     </div>`
   }
   })
@@ -118,14 +118,16 @@ const renderUserAudio = async (userAudio) => {
     })
 
     userAudio.innerHTML += `<div class="single-book">
-    <img src="http://localhost:1337${cover.data.attributes.url}" height="150" width="100">
-    <p class="item-p">Title: ${title}</p>
-    <p class="item-p">Published: ${published}</p>
-    <p class="item-p">Length (minutes): ${length}</p>
-    <p class="item-p">Score: ${score}</p>
-    <p class="item-p">Genre(s): ${genreText}</p>
-    <p class="item-p">Lender: ${user.data.attributes.username}</p>
-    <p class="item-p">Contact: ${user.data.attributes.email}</p>
+    <div class="height-div"></div>
+    <img src="http://localhost:1337${cover.data.attributes.url}" height="100" width="100">
+    <div class="height-div2"></div>
+    <p class="item-p"><b>Title:</b> ${title}</p>
+    <p class="item-p"><b>Published:</b> ${published}</p>
+    <p class="item-p"><b>Length:</b> ${length} minutes</p>
+    <p class="item-p"><b>Score:</b> ${score}</p>
+    <p class="item-p"><b>Genre(s):</b> ${genreText}</p>
+    <p class="item-p"><b>Lender:</b> ${user.data.attributes.username}</p>
+    <p class="item-p"><b>Contact:</b> ${user.data.attributes.email}</p>
     </div>`
   }
   })
