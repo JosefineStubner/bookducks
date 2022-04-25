@@ -1,5 +1,3 @@
-//lol
-
 const addBookBtn = document.querySelector("#add-book-btn");
 const addAudiobookBtn = document.querySelector("#add-audiobook-btn");
 
@@ -53,7 +51,7 @@ const addBook = async () => {
         user: [userId],
         cover: res.data[0].id,
       });
-      //Placerar den uppladdade filens id i vår nya produkt vi vill lägga till.
+      
       axios.post(
         "http://localhost:1337/api/books",
         {
@@ -115,7 +113,7 @@ const addAudiobook = async () => {
           user: [userId],
           cover: res.data[0].id,
         });
-        //Placerar den uppladdade filens id i vår nya produkt vi vill lägga till.
+        
         axios.post(
           "http://localhost:1337/api/audiobooks",
           {

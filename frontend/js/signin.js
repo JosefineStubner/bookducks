@@ -33,7 +33,6 @@ const checkIfLoggedIn = () => {
 // Register
 const registerBtn = document.querySelector("#register-btn");
 
-//OBS ändra så att denna skickar till profilsida när registrerad.
 registerBtn.addEventListener("click", (e) => {
   e.preventDefault();
   register();
@@ -53,7 +52,7 @@ const register = async () => {
   });
   console.log(response);
   sessionStorage.setItem("token", response.data.jwt);
-  // location.href = "profile.html";
+  location.href = "profile.html";
 
   checkIfLoggedIn();
 }

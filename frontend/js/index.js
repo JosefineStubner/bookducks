@@ -1,4 +1,5 @@
-//Itemlists from Strapi
+//bookducks@bookducks.com
+//Bookducks1
 
 //GET items
 const getBookItems = async () => {
